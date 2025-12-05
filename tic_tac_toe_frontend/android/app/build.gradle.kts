@@ -10,6 +10,7 @@ android {
     compileSdk = flutter.compileSdkVersion
     // Pin NDK version to satisfy plugins requiring a specific NDK toolchain.
     // shared_preferences_android and sqflite_android require NDK 27.0.12077973.
+    // Do not change this unless all dependent plugins are updated to support a newer NDK.
     ndkVersion = "27.0.12077973"
 
     compileOptions {
