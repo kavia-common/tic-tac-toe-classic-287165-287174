@@ -8,7 +8,9 @@ plugins {
 android {
     namespace = "com.example.tic_tac_toe_frontend"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    // Pin NDK version to satisfy plugins requiring a specific NDK toolchain.
+    // shared_preferences_android and sqflite_android require NDK 27.0.12077973.
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
